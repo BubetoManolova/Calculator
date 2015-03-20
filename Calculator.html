@@ -1,0 +1,204 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<link rel="stylesheet" type="text/css" href="Calculator.css">
+	</head>
+
+
+<body>
+		<div id="box">
+
+			<header>
+				<img src="images/calpic.png" alt="sorry" id="left">
+				<span>Calculator</span>
+				<img src="images/wb.png" id="right">
+			</header>
+
+			<div id="innerbox">
+				<nav class="list">
+					<ul>
+						<li>View</li>
+						<li>Edit</li>
+						<li>Help</li>
+					</ul>
+				</nav>
+
+				<div id="display">
+					<input type="text" readonly="readonly" value="112345679">
+				</div>
+<!-- EVENTUALLY DIV??? -->
+				<div class="binary">
+					<table>
+						<tr>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+						</tr>
+
+						<tr>
+							<td class="grey">63</td><td></td><td></td><td></td><td class="grey">67</td><td></td><td></td><td class="grey">32</td>
+						</tr>
+
+						<tr>
+							<td>0000</td>
+							<td>0000</td>
+							<td>1000</td>
+							<td>0111</td>
+							<td>0001</td>
+							<td>1011</td>
+							<td>1011</td>
+							<td>0111</td>
+						</tr>
+
+						<tr>
+							<td class="grey">31</td><td></td><td></td><td></td><td class="grey">15</td><td></td><td></td><td>0</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="buttons">
+					<table>
+						<tbody>
+							<tr>
+								<td colspan="2" rowspan="3">
+									<ul>
+										<li><input type="radio">Hex</li>
+										<li><input type="radio" checked="checked">Dec</li>
+										<li><input type="radio">Oct</li>
+										<li><input type="radio">Bin</li>
+									</ul>
+								</td>
+								<td>
+									<button class="shadow" disabled="disabled"></button></td>
+								<td>
+									<button class="gradient" name="Mod">Mod</button></td>	
+								<td>
+									<button class="shadow" name="A">A</button></td>
+								<td>
+									<button class="none" name="MC">MC</button></td>
+								<td>
+									<button class="none" name="MR">MR</button></td>
+								<td>
+									<button class="none" name="MS">MS</button></td>
+								<td>
+									<button class="none" name="M+">M+</button></td>
+								<td>
+										<button class="none" name="M-">M-</button></td>
+							</tr>
+
+								
+							<tr>						
+								<td>
+									<button class="gradient" name="(" onclick='v("(")'>(</button></td>
+								<td>
+									<button class="gradient" name=")" onclick='v(")")'>)</button></td>
+								<td>
+									<button class="shadow" name="B" >B</button></td>
+								<td>
+									<button class="gradient" name="&larr;" >&larr;</button></td>
+								<td>
+									<button class="gradient" name="CE" >CE</button></td>
+								<td>
+									<button class="gradient" name="C" >C</button></td>
+								<td>
+									<button class="gradient" name="+/_" >+/_</button></td>
+								<td>
+									<button class="shadow" name="&radic;" >&radic;</button></td>
+							
+
+							</tr>
+								<td>
+									<button class="gradient" name="Rol" >Rol</button></td>
+								<td>
+									<button class="gradient" name="RoR" >RoR</button></td>
+								<td>
+									<button class="shadow" name="C" >C</button></td>
+								<td>
+									<button class="standart" name="7" onclick='v("7")'>7</button></td>
+								<td>
+									<button class="standart" name="8" onclick='v("8")'>8</button></td>
+								<td>
+									<button class="standart" name="9" onclick='v("9")'>9</button></td>
+								<td>
+									<button class="gradient" name="/" onclick='v("/")'>/</button></td>
+								<td>
+									<button class="shadow" name="%" onclick='v("%")'>%</button></td>
+							
+						
+							<tr>
+								<td colspan="2" rowspan="3">
+									<ul>
+										<li><input type="radio" checked="cheched">Qword</li>
+										<li><input type="radio">Dword</li>
+										<li><input type="radio">Word</li>
+										<li><input type="radio">Byte</li>
+									</ul>
+								</td>
+									
+								<td>
+									<button class="gradient" name="Or" >Or</button></td>
+								<td>
+									<button class="gradient" name="Xor" >Xor</button></td>
+								<td>
+									<button class="shadow" name="D" >D</button></td>
+								<td>
+									<button class="standart" name="4" onclick='v("4")'>4</button></td>
+								<td>
+									<button class="standart" name="5" onclick='v("5")'>5</button></td>
+								<td>
+									<button class="standart" name="6" onclick='v("6")'>6</button></td>
+								<td>
+									<button class="gradient" name="*" onclick='v("*")'>*</button></td>
+								<td>
+									<button class="shadow" name="1/x" >1/x</button></td>
+							</tr>
+
+							<tr>
+								<td>
+									<button class="gradient" name="Lsh">Lsh</button></td>
+								<td>
+									<button class="gradient" name="Rsh">Rsh</button></td>
+								<td>
+									<button class="shadow" name="E">E</button></td>
+								<td>
+									<button class="standart" name="1" onclick='v("1")'>1</button></td>
+								<td>
+									<button class="standart" name="2" onclick='v("2")'>2</button></td>
+								<td>
+									<button class="standart" name="3" onclick='v("3")'>3</button></td>
+								<td>
+									<button class="gradient" name="-" onclick='v("-")'>-</button></td>
+								<td rowspan="2">
+									<button class="gradient equal-bold" name="=" onclick='v("=")'>=</button></td>
+							</tr>					
+							
+							<tr>
+								<td>
+									<button class="gradient" name="not" >Not</button></td>
+								<td>
+									<button class="gradient" name="And" >And</button></td>
+								<td>
+									<button class="shadow" name="F" >F</button></td>
+								<td colspan="2">
+									<button class="standart zero" name="0" onclick='v("0")'>0</button></td>
+								<td>
+									<button class="shadow" name="." onclick='v(".")'>.</button></td>
+								<td>
+									<button class="gradient" name="+" onclick='v("+")'>+</button></td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</div>
+			
+
+		</div>	
+</body>
+
+</html>
